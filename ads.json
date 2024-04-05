@@ -13,7 +13,9 @@
             "authentication"
         ],
         "noDirectLaunch": [],
-        "configs": {},
+        "configs": {
+            "org.gluu.agama.duo.main": {}
+        },
         "name": "agama-duo"
     }
 }
