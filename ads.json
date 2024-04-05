@@ -1,1 +1,18 @@
-{}
+{
+    "agama-duo": {
+        "projectName": "agama-duo",
+        "description": "Agama Project for the Cisco Duo authentication service.",
+        "type": "community",
+        "author": "shekhar16",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/shekhar16/agama-duo",
+        "githubUri": "https://github.com/shekhar16/agama-duo",
+        "license": "apache-2.0",
+        "lastUpdated": "1712334834753",
+        "tags": [
+            "authentication"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
+    }
+}
