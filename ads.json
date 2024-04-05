@@ -14,7 +14,12 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.agama.duo.main": {}
+            "org.gluu.agama.duo.main": {
+                "clientId": "DI1QCWC6TY96FLSPDEKE",
+                "clientSecret": "sPqo9w4BgBOJexIwJd105ZEzaLeoqEB2HaunMKLF",
+                "apiHost": "api-de9a3a97.duosecurity.com",
+                "redirectUri": "https://shekhar16-prepared-donkey.gluu.info/jans-auth/fl/callback"
+            }
         },
         "name": "agama-duo"
     }
