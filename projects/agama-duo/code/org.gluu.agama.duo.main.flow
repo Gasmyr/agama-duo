@@ -1,2 +1,38 @@
-Flow org.gluu.agama.duo.main
+Flow co.acme.duo_login
      Basepath ""
+     Configs conf
+authService = Call io.jans.as.server.service.AuthenticationService#class 
+// Create new cdiUtil object.
+cdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean authService
+// Empty Result Object
+authResult = {}
+// retry 3 times
+Repeat 3 times max
+     // loads login page for username and password input
+     creds = RRF "login.ftlh" authResult
+     // validate username and password
+     authResult.success = Call cdiUtil authenticate creds.username creds.password
+     // keep username in case user wants to retry
+     authResult.uid = creds.username
+     // check auth response
+     When authResult.success is true
+          authUrl = {}
+          clientId = conf.clientId
+          clientSecret = conf.clientSecret
+          apiHost = conf.apiHost
+          redirectUri = conf.redirectUri
+          authUrl.url | E = Call org.gluu.agama.duo.DuoClientService#duoValidate clientId
+          Log "@info check" E  authUrl
+          callbackResult = RFAC authUrl.url
+          Log "@info callbackResult " callbackResult
+          callbackState = {}
+          callbackState.data | calbackE = Call org.gluu.agama.duo.DuoClientService#validateCallback callbackResult creds.username
+          Log "@info  callback data " callbackState.data calbackE
+          When callbackState.data is not "false"
+               it_mbxoc = {success:true, data:  {userId: authResult.uid }}
+               Finish it_mbxoc
+          Log "@info  when callbackState.data " callbackState.data
+     // check logs after when condition
+     Log "@info " post when log
+it_nkjdp = {success:false, error: "auth failed"}
+Finish it_nkjdp
