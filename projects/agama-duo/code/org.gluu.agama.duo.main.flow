@@ -29,10 +29,10 @@ Repeat 3 times max
           callbackState.data | calbackE = Call org.gluu.agama.duo.DuoClientService#validateCallback callbackResult creds.username
           Log "@info  callback data " callbackState.data calbackE
           When callbackState.data is not "false"
-               it_prtdq = {success:true, data:  {userId: authResult.uid }}
-               Finish it_prtdq
+               it_fzwcw = {success:true, data:  {userId: authResult.uid }}
+               Finish it_fzwcw
           Log "@info  when callbackState.data " callbackState.data
      // check logs after when condition
      Log "@info " post when log
-it_usefu = {success:false, error: "auth failed"}
-Finish it_usefu
+it_pvwxg = {success:false, error: "auth failed"}
+Finish it_pvwxg
