@@ -946,7 +946,7 @@
 				"type": "Agama-start-Flow",
 				"position": {
 					"x": 30,
-					"y": 32.66666666666663
+					"y": 30
 				},
 				"inRepeatBlock": false,
 				"agamaData": {
@@ -962,19 +962,19 @@
 					"timeout": "",
 					"inputs": "",
 					"configs": "conf",
-					"flowname": "co.acme.duo_login"
+					"flowname": "org.gluu.agama.duo.main"
 				},
 				"skake": false
 			},
 			"position": {
 				"x": 30,
-				"y": 32.66666666666663
+				"y": 30
 			},
 			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
-				"y": 32.66666666666663
+				"y": 30
 			}
 		},
 		{
@@ -1536,8 +1536,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 216,
-		"zoom": 0.75
+		"x": 134.24593331084662,
+		"y": 107.73814106536605,
+		"zoom": 0.5006936278556673
 	}
 }
