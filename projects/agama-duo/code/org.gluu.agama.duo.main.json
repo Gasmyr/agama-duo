@@ -346,14 +346,17 @@
 					"whenCondition": "",
 					"inRepeatBlock": true,
 					"arguments": [
-						"clientId"
+						"clientId",
+						"clientSecret",
+						"apiHost",
+						"redirectUri"
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authUrl.url"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1008.7995558936035,
@@ -1536,8 +1539,8 @@
 		}
 	],
 	"viewport": {
-		"x": -315.9317356942556,
-		"y": 21.746852958591006,
-		"zoom": 0.6119046056064175
+		"x": 40.604910043541764,
+		"y": 11.734547748674231,
+		"zoom": 0.5914320052087578
 	}
 }
