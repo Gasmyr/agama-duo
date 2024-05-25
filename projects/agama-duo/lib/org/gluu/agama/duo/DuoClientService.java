@@ -13,14 +13,14 @@ class DuoClientService{
 
     private static Client duoClient;
 
-    public static String  duoValidate(String clientId) throws DuoException {
-        System.out.println("passed from assignment clientId  :  " + clientId);
+    public static String  duoValidate(String clientId, String clientSecret, String apiHost, String httpsRedirectUri ) throws DuoException {
+        System.out.println("passed from assignment clientId:" + clientId+ "clientSecret :" + clientSecret);
         Map<String, String> stateMap = new HashMap<>();;
-        String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
+        /*String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
         String CLIENT_SECRET = "sPqo9w4BgBOJexIwJd105ZEzaLeoqEB2HaunMKLF";
         String API_HOST = "api-de9a3a97.duosecurity.com";
-        String HTTPS_REDIRECT_URI = "https://shekhar16-evolving-bream.gluu.info/jans-auth/fl/callback";
-        this.duoClient = new Client.Builder(CLIENT_ID, CLIENT_SECRET, API_HOST, HTTPS_REDIRECT_URI).build();
+        String HTTPS_REDIRECT_URI = "https://shekhar16-evolving-bream.gluu.info/jans-auth/fl/callback";*/
+        this.duoClient = new Client.Builder(clientId, clientSecret, apiHost, httpsRedirectUri).build();
 
         String state = duoClient.generateState();
         // Store the state to remember the session and username
