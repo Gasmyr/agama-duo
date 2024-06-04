@@ -9,18 +9,32 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.HashMap;
 import java.util.Map;
 
-class DuoClientService{
+public class DuoClientService{
 
-    private static Client duoClient;
+    //private static Client duoClient;
+	protected static final Logger log = LoggerFactory.getLogger(DuoClientService.class);
+	
+	private String clientId;
+    private String clientSecret;
+    private String apiHost;
+    private String redirectUri;
+	
+	public DuoClientService(String clientId, String clientSecret, String apiHost, String redirectUri){
+		log.debug("Duo client details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
+		this.clientId = clientId;
+		this.clientSecret= clientSecret;
+		this.apiHost= apiHost;
+		this.redirectUri= redirectUri;		
+	}
 
-    public static String  duoValidate(String clientId, String clientSecret, String apiHost, String httpsRedirectUri ) throws DuoException {
-        System.out.println("passed from assignment clientId:" + clientId+ "clientSecret :" + clientSecret);
+    public String  duoValidate() throws DuoException {
+        log.debug("Inside duoValidate details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
         Map<String, String> stateMap = new HashMap<>();;
         /*String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
         String CLIENT_SECRET = "sPqo9w4BgBOJexIwJd105ZEzaLeoqEB2HaunMKLF";
         String API_HOST = "api-de9a3a97.duosecurity.com";
         String HTTPS_REDIRECT_URI = "https://shekhar16-evolving-bream.gluu.info/jans-auth/fl/callback";*/
-        this.duoClient = new Client.Builder(clientId, clientSecret, apiHost, httpsRedirectUri).build();
+        Client duoClient = new Client.Builder(clientId, clientSecret, apiHost, redirectUri).build();
 
         String state = duoClient.generateState();
         // Store the state to remember the session and username
@@ -34,12 +48,13 @@ class DuoClientService{
 
     }
 
-    public static String validateCallback(Map callbackUrl, String uid) throws DuoException {
-        String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
+    public String validateCallback(Map callbackUrl, String uid) throws DuoException {
+		log.debug("Inside validateCallback details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
+        /*String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
         String CLIENT_SECRET = "sPqo9w4BgBOJexIwJd105ZEzaLeoqEB2HaunMKLF";
         String API_HOST = "api-de9a3a97.duosecurity.com";
-        String HTTPS_REDIRECT_URI = "https://shekhar16-evolving-bream.gluu.info/jans-auth/fl/callback";
-        this.duoClient = new Client.Builder(CLIENT_ID, CLIENT_SECRET, API_HOST, HTTPS_REDIRECT_URI).build();
+        String HTTPS_REDIRECT_URI = "https://shekhar16-evolving-bream.gluu.info/jans-auth/fl/callback";*/
+        Client duoClient = new Client.Builder(clientId, clientSecret, apiHost, redirectUri).build();
 
         System.out.println("check callbackUrl  :  " + callbackUrl);
         String state = (String) callbackUrl.get("state");
@@ -54,14 +69,14 @@ class DuoClientService{
         return result;
     }
 
-    private static boolean authWasSuccessful(Token token) {
+    private boolean authWasSuccessful(Token token) {
         if (token != null && token.getAuth_result() != null) {
             return "ALLOW".equalsIgnoreCase(token.getAuth_result().getStatus());
         }
         return false;
     }
 
-    private static String tokenToJson(Token token) throws DuoException {
+    private String tokenToJson(Token token) throws DuoException {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             return objectMapper.writer().writeValueAsString(token);
