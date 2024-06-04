@@ -379,8 +379,8 @@
 			"dragging": false
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-b57f3b3d-4e4a-44ca-9d1b-36c92112af4e",
 			"position": {
 				"x": 909.7995558936035,
@@ -410,7 +410,7 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": false
+				"skake": true
 			},
 			"selected": false,
 			"dragging": false,
@@ -1071,7 +1071,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "duoClientService"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1608,8 +1609,8 @@
 		}
 	],
 	"viewport": {
-		"x": -651,
-		"y": -143,
+		"x": -484,
+		"y": -222,
 		"zoom": 0.75
 	}
 }
