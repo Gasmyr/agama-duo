@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 123,
+			"id": "Agama-log-Node-b3e4e44a-5f82-4d75-8b87-4d1cec3277b5",
+			"position": {
+				"x": 859.7995558936035,
+				"y": 240.0534950364446
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-b3e4e44a-5f82-4d75-8b87-4d1cec3277b5",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-when-Node-6a7d5c28-cb6e-49e8-a12b-5a1778fdd9f6",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 859.7995558936035,
+					"y": 240.0534950364446
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-b3e4e44a-5f82-4d75-8b87-4d1cec3277b5",
+					"parentId": "Agama-when-Node-6a7d5c28-cb6e-49e8-a12b-5a1778fdd9f6",
+					"type": "Agama-log-Node",
+					"displayName": "log after when",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"logMessage": "post when log ",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 859.7995558936035,
+				"y": 240.0534950364446
+			}
+		},
+		{
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-af18c2a3-b076-4a8c-9815-5705a15224bd",
 			"position": {
 				"x": 2958.7995558936036,
@@ -1483,11 +1525,29 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-when-Node-6a7d5c28-cb6e-49e8-a12b-5a1778fdd9f6-Agama-log-Node-b3e4e44a-5f82-4d75-8b87-4d1cec3277b5-bc3bd916-8ba9-4c5b-a7be-421c9107d5e5",
+			"type": "default",
+			"source": "Agama-when-Node-6a7d5c28-cb6e-49e8-a12b-5a1778fdd9f6",
+			"target": "Agama-log-Node-b3e4e44a-5f82-4d75-8b87-4d1cec3277b5",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-6a7d5c28-cb6e-49e8-a12b-5a1778fdd9f6.FAILURE"
 		}
 	],
 	"viewport": {
-		"x": -154.79255535745358,
-		"y": -25.97340563626352,
+		"x": -157.79255535745358,
+		"y": 129.02659436373648,
 		"zoom": 0.6983799787995748
 	}
 }
