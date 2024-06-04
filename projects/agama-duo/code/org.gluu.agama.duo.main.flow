@@ -30,10 +30,10 @@ callbackState = {}
 callbackState.data | calbackE = Call duoClientService validateCallback callbackResult creds.username
 Log "@info  callback data " callbackState.data calbackE
 When callbackState.data is not "false"
-     it_zxmad = {success:true, data:  {userId: authResult.uid }}
-     Finish it_zxmad
+     it_qdfef = {success:true, data:  {userId: authResult.uid }}
+     Finish it_qdfef
 Log "@info  when callbackState.data " callbackState.data
      // check logs after when condition
      Log "@info " post when log
-it_pplni = {success:false, error: "auth failed"}
-Finish it_pplni
+it_qocns = {success:false, error: "auth failed"}
+Finish it_qocns
