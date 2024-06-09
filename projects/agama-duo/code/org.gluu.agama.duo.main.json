@@ -1111,15 +1111,10 @@
 					"javaMethodName": "duoValidate",
 					"javaVariableName": "",
 					"exceptionVariableField": "E",
-					"callType": "Call static method",
+					"callType": "Call method on instance",
 					"whenCondition": "",
 					"inRepeatBlock": true,
-					"arguments": [
-						"clientId",
-						"clientSecret",
-						"apiHost",
-						"redirectUri"
-					],
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authUrl.url",
 					"position": {
@@ -1617,8 +1612,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 216,
-		"zoom": 0.75
+		"x": -492.7688714473866,
+		"y": -188.69871527747114,
+		"zoom": 0.7992538932722052
 	}
 }
