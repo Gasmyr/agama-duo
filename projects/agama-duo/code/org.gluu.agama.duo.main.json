@@ -1109,7 +1109,7 @@
 					"comment": "",
 					"javaClassName": "org.gluu.agama.duo.DuoClientService",
 					"javaMethodName": "duoValidate",
-					"javaVariableName": "",
+					"javaVariableName": "duoClientService",
 					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"whenCondition": "",
@@ -1121,7 +1121,7 @@
 						"x": 1158.7995558936036
 					}
 				},
-				"skake": false,
+				"skake": true,
 				"inIterateBlock": ""
 			},
 			"selected": true,
