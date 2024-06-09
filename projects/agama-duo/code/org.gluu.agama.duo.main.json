@@ -1071,7 +1071,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "duoClientService"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1616,8 +1617,8 @@
 		}
 	],
 	"viewport": {
-		"x": -254.43301628450683,
-		"y": -60.77630921601474,
-		"zoom": 0.597480072214187
+		"x": 10,
+		"y": 216,
+		"zoom": 0.75
 	}
 }
