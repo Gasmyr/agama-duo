@@ -1,10 +1,10 @@
-package org.gluu.agama.duo;
-
 import com.duosecurity.Client;
 import com.duosecurity.exception.DuoException;
 import com.duosecurity.model.Token;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,20 +12,20 @@ import java.util.Map;
 public class DuoClientService{
 
     //private static Client duoClient;
-	protected static final Logger log = LoggerFactory.getLogger(DuoClientService.class);
-	
-	private String clientId;
+    protected static final Logger log = LoggerFactory.getLogger(DuoClientService.class);
+
+    private String clientId;
     private String clientSecret;
     private String apiHost;
     private String redirectUri;
-	
-	public DuoClientService(String clientId, String clientSecret, String apiHost, String redirectUri){
-		log.debug("Duo client details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
-		this.clientId = clientId;
-		this.clientSecret= clientSecret;
-		this.apiHost= apiHost;
-		this.redirectUri= redirectUri;		
-	}
+
+    public DuoClientService(String clientId, String clientSecret, String apiHost, String redirectUri){
+        log.debug("Duo client details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
+        this.clientId = clientId;
+        this.clientSecret= clientSecret;
+        this.apiHost= apiHost;
+        this.redirectUri= redirectUri;
+    }
 
     public String  duoValidate() throws DuoException {
         log.debug("Inside duoValidate details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
@@ -49,7 +49,7 @@ public class DuoClientService{
     }
 
     public String validateCallback(Map callbackUrl, String uid) throws DuoException {
-		log.debug("Inside validateCallback details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
+        log.debug("Inside validateCallback details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
         /*String CLIENT_ID = "DI1QCWC6TY96FLSPDEKE";
         String CLIENT_SECRET = "sPqo9w4BgBOJexIwJd105ZEzaLeoqEB2HaunMKLF";
         String API_HOST = "api-de9a3a97.duosecurity.com";
