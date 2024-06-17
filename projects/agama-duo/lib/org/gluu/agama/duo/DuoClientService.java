@@ -18,6 +18,10 @@ public class DuoClientService{
     private String clientSecret;
     private String apiHost;
     private String redirectUri;
+    
+    public DuoClientService(){
+        super();
+    }
 
     public DuoClientService(String clientId, String clientSecret, String apiHost, String redirectUri){
         log.debug("Duo client details : clientId :{}, clientSecret:{}, apiHost:{}, redirectUri:{} ", clientId, clientSecret, apiHost, redirectUri);
