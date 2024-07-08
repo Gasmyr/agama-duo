@@ -934,7 +934,7 @@
 			"height": 60,
 			"id": "Agama-when-Node-3d31db81-5681-46b2-97c0-8bccbc4e11af",
 			"position": {
-				"x": 2558.7995558936036,
+				"x": 2408.7995558936036,
 				"y": 523.0737402851726
 			},
 			"parentId": "Agama-log-Node-9bab1408-a202-4359-8c8c-d4194cd159a2",
@@ -947,7 +947,7 @@
 				"inRepeatBlock": false,
 				"inIterateBlock": false,
 				"position": {
-					"x": 2558.7995558936036,
+					"x": 2408.7995558936036,
 					"y": 523.0737402851726
 				},
 				"agamaData": {
@@ -975,7 +975,7 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2558.7995558936036,
+				"x": 2408.7995558936036,
 				"y": 523.0737402851726
 			}
 		},
@@ -1011,7 +1011,8 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"position": {
-						"x": 2358.7995558936036
+						"x": 2358.7995558936036,
+						"y": 469.07374028517256
 					}
 				},
 				"skake": false,
